@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-page -d src"
+    "deploy": "./node_modules/.bin/gh-pages -d src"
   },
   "author": "",
   "license": "ISC",

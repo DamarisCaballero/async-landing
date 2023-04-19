@@ -8,14 +8,14 @@ const options={
     async function fetchData(urlApi){const response=await fetch(urlApi,options);const data=await response.json();return data;}
     
     (async()=>{
-    try{
-        const videos=await fetchData(API);
+    try {
+        const videos = await fetchData(API);
         let view = `
     ${videos.items.map(video=>`
       <div class="group relative">
         <div
           class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
-          <img src="${video.snippet.thumbnail.high.url}" alt="${video.snippet.description}" 
+          <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" 
           class="w-full">
         </div>
         <div class="mt-4 flex justify-between">
